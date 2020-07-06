@@ -25,5 +25,12 @@ app.get('/about', (req, res) => {
         message: 'Hello you to my about',
         name: 'Ho quang tri'
     })
+});
+
+app.get('/server', (req, res) => {
+    res.json({
+        message: 'hello to server',
+        date: new Date().toLocaleString()
+    })
 })
 app.listen(port, () => console.log('server on run'));
