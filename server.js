@@ -11,5 +11,11 @@ app.get('/admin', (req, res) => {
         username: 'username',
         password: 'password'
     })
+});        
+app.get('/new', (req, res) => {
+    res.json({
+        message: 'new',
+        date: new Date().toLocaleString()
+    })
 })
 app.listen(port, () => console.log('server on run'));
