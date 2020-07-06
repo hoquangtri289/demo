@@ -5,4 +5,10 @@ app.get('/', (req, res) => {
     res.json({message: 'hello app of me'});
 })
 
+app.get('/new', (req, res) => {
+    res.json({
+        message: 'new',
+        date: new Date().toLocaleString()
+    })
+})
 app.listen(port, () => console.log('server on run'));
